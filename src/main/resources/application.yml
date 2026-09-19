@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: pontoflex
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pontoflex
+    username: pontoflex
+    password: pontoflex
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+pontoflex:
+  jwt:
+    secret: ${JWT_SECRET:troque-este-segredo-em-producao-com-32-bytes-no-minimo}
+    expiracao-minutos: 480
+  geofence:
+    limite-baixa-confianca-metros: 50
+  banco-horas:
+    expiracao-meses: 6
