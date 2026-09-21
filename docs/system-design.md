@@ -39,7 +39,7 @@ Diferente de um CRUD simples, este projeto força decisões de engenharia que ap
 
 | Camada | Tecnologia | Motivo |
 | --- | --- | --- |
-| Backend | Java 21 + Spring Boot 3.x | Spring Web, Spring Data JPA, Spring Security, Bean Validation |
+| Backend | Java 25 + Spring Boot 3.x | Spring Web, Spring Data JPA, Spring Security, Bean Validation |
 | Banco de dados | PostgreSQL | Bom suporte a tipos de data/hora; extensível com PostGIS para geofencing avançado |
 | Migração de schema | Flyway | Versionamento de schema auditável |
 | Testes | JUnit 5, Mockito, Testcontainers | Testes de integração com Postgres real em container |
@@ -479,7 +479,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'
+          java-version: '25'
       - run: mvn -B verify
 ```
 
