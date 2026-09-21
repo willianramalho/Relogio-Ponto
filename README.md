@@ -12,7 +12,7 @@ versionado no repositorio.
 
 ## Stack
 
-- Java 25 + Spring Boot 3.3
+- Java 21 + Spring Boot 3.3
 - PostgreSQL 16 + Flyway
 - Spring Security (JWT)
 - springdoc-openapi (Swagger UI)
