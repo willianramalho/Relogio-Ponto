@@ -292,6 +292,7 @@ erDiagram
 | Método | Rota | Descrição | Acesso |
 | --- | --- | --- | --- |
 | POST | `/api/auth/login` | Autentica e retorna JWT | Público |
+| POST | `/api/auth/registrar` | Autoregistro (cria colaborador + login); escala/local usam seed de desenvolvimento (V4) ate o cadastro proprio existir. Restringir a RH_ADMIN quando o modulo de RH existir. | Público (temporário) |
 | POST | `/api/colaboradores` | Cadastra colaborador | RH/ADMIN |
 | GET | `/api/colaboradores/{id}` | Consulta colaborador | Próprio, gestor, RH |
 | POST | `/api/locais-trabalho` | Cadastra local de trabalho + geofence | RH/ADMIN |
